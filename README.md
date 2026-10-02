@@ -92,7 +92,29 @@ Refs: #42
 
 ### Schéma du workflow
 
-feature/* | | Pull Request v dev | | Pull Request v main | v Production
+```text
+┌─────────────────────┐
+│     feature/*       │
+│  Branche éphémère   │
+└──────────┬──────────┘
+           │
+           │ Pull Request
+           ▼
+┌─────────────────────┐
+│        dev          │
+│    Intégration      │
+└──────────┬──────────┘
+           │
+           │ Pull Request
+           ▼
+┌─────────────────────┐
+│        main         │
+│     Production      │
+└──────────┬──────────┘
+           │
+           ▼
+      Production
+```
 
 ### Règles
 
