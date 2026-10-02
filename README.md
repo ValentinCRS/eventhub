@@ -82,5 +82,3 @@ Refs: #42
 ```
 
 ---
-
-Cette convention permet de garder un historique Git lisible, exploitable automatiquement et cohérent entre développeurs.
