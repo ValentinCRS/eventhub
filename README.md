@@ -92,7 +92,26 @@ Refs: #42
 
 ### Schéma du workflow
 
-┌─────────────────────┐ │ feature/* │ │ Branche éphémère │ └──────────┬──────────┘ │ │ Pull Request ▼ ┌─────────────────────┐ │ dev │ │ Intégration │ └──────────┬──────────┘ │ │ Pull Request ▼ ┌─────────────────────┐ │ main │ │ Production │ └──────────┬──────────┘ │ ▼ Production
+┌─────────────────────┐
+│ feature/* │
+│ Branche éphémère │
+└──────────┬──────────┘
+│
+│ Pull Request
+▼
+┌─────────────────────┐
+│ dev │
+│ Intégration │
+└──────────┬──────────┘
+│
+│ Pull Request
+▼
+┌─────────────────────┐
+│ main │
+│ Production │
+└──────────┬──────────┘
+│
+▼ Production
 
 ### Règles
 
