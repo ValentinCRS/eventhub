@@ -92,7 +92,7 @@ Refs: #42
 
 ### Schéma du workflow
 
-flowchart LR A[feature/*] -->|Pull Request| B[dev] B -->|Pull Request| C[main] C --> D[Production]
+┌─────────────────────┐ │ feature/* │ │ Branche éphémère │ └──────────┬──────────┘ │ │ Pull Request ▼ ┌─────────────────────┐ │ dev │ │ Intégration │ └──────────┬──────────┘ │ │ Pull Request ▼ ┌─────────────────────┐ │ main │ │ Production │ └──────────┬──────────┘ │ ▼ Production
 
 ### Règles
 
