@@ -6,16 +6,33 @@
 
 ## Schéma du workflow
 
-                    Pull Request
-
-feature/* ───────────────────────────→ dev
-│
-│ Pull Request
-↓
-main
-│
-↓
-Production
+```mermaid
+gitGraph
+   commit id: "init"
+   branch dev
+   checkout dev
+   commit id: "chore: setup"
+   branch feat/event-creation
+   checkout feat/event-creation
+   commit id: "feat: add form"
+   commit id: "feat: add validation"
+   checkout dev
+   merge feat/event-creation id: "PR #1"
+   branch fix/date-timezone
+   checkout fix/date-timezone
+   commit id: "fix: timezone"
+   checkout dev
+   merge fix/date-timezone id: "PR #2"
+   checkout main
+   merge dev id: "Release v1.0.0" tag: "v1.0.0"
+   branch hotfix/login-crash
+   checkout hotfix/login-crash
+   commit id: "fix: login crash"
+   checkout main
+   merge hotfix/login-crash id: "Hotfix" tag: "v1.0.1"
+   checkout dev
+   merge main id: "Sync hotfix"
+```
 
 ## Règles
 
