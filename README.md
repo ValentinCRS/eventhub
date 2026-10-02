@@ -75,7 +75,8 @@ BREAKING CHANGE: environment variables must be renamed
 feat(ui): add dashboard statistics panel
 
 The dashboard now displays KPIs for user activity and revenue.
-The layout was adapted for responsive screens.
+The lay
+out was adapted for responsive screens.
 
 Reviewed-by: team
 Refs: #42
@@ -83,20 +84,17 @@ Refs: #42
 
 ---
 
-# Workflow Git
+## Workflow Git
 
 - `main` : branche de production. Elle contient uniquement du code validé et stable.
 - `dev` : branche d’intégration. Les différentes fonctionnalités y sont regroupées avant leur passage en production.
 - `feature/*` : branches éphémères utilisées pour développer les différents livrables ou fonctionnalités.
 
-## Schéma du workflow
+### Schéma du workflow
 
-flowchart LR
-A[feature/*] -->|Pull Request| B[dev]
-B -->|Pull Request| C[main]
-C --> D[Production]
+flowchart LR A[feature/*] -->|Pull Request| B[dev] B -->|Pull Request| C[main] C --> D[Production]
 
-## Règles
+### Règles
 
 1. Aucun push direct sur `main` ni `dev`.
 2. Toute modification passe par une Pull Request.
