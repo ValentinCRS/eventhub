@@ -111,7 +111,8 @@ Refs: #42
 │ Production │
 └──────────┬──────────┘
 │
-▼ Production
+▼
+Production
 
 ### Règles
 
